@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Template-Design</title> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/layout-style.css">
+    <link rel="stylesheet" href="css/ui-interact-style.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="css/colorpicker.css"/>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<style>
+    html, body {
+        height:100%; 
+        overflow:hidden;
+    }
+    body {
+        overflow:auto; 
+        -webkit-overflow-scrolling:touch;
+    }
+</style>
+
+<body>
+
+    <div class="TEMDE-UI-templatedesign">
+
+
+        <div class="TEMDE-header">
+            <div class="TEMDE-headerwidth">
+
+                <div class="TEMDE-function-controllerstruc" id="TEMDE-function-controller">
+
+                    <div class="TEMDE-itemschecker">
+                        <div class="showitems">
+                            <p>顯示項目</p>
+                        </div>
+                        <ul class="ul-items">
+                            <li class="ul-li-items">
+                                <label for="labelinfo" class="labelstyle">
+                                    <input type="checkbox" class="inputsty" name="" id="labelinfo" value="labeltag"  data-show="ShowLabel" checked="">
+                                    <p class="descp">標籤</p>
+                                </label>
+                            </li>
+                            <li class="ul-li-items">
+                                <label for="picinfo" class="labelstyle">
+                                    <input type="checkbox" class="inputsty" name="" id="picinfo" value="pic" data-show="ShowPic" checked="">
+                                    <p class="descp">圖片</p>
+                                </label>
+                            </li>
+                            <li class="ul-li-items">
+                                <label for="titleinfo" class="labelstyle">
+                                    <input type="checkbox" class="inputsty" name="" id="titleinfo" value="title" data-show="ShowTitle" checked="">
+                                    <p class="descp">主標題</p>
+                                </label>
+                            </li>
+                            <li class="ul-li-items">
+                                <label for="textinfo" class="labelstyle">
+                                    <input type="checkbox" class="inputsty" name="" id="textinfo" value="text" data-show="ShowText" checked="">
+                                    <p class="descp">純文字</p>
+                                    <div class="inputnumber">
+                                        <input type="text" name="textnumr" value="1" placeholder="1">
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="ul-li-items">
+                                <label for="listinfo" class="labelstyle">
+                                    <input type="checkbox" class="inputsty" name="" id="listinfo" value="ol-items" data-show="ShowList" checked="">
+                                    <p class="descp">條列文字</p>
+                                    <div class="inputnumber">
+                                        <input type="text" name="listnumr" value="1" placeholder="1">
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="ul-li-items">
+                                <label for="btninfo" class="labelstyle">
+                                    <input type="checkbox" class="inputsty" name="" id="btninfo" value="btnnn-ul" data-show="ShowButton" checked="">
+                                    <p class="descp">按鈕</p>
+                                    <div class="inputnumber">
+                                        <input type="text" name="btnnumr" value="1" placeholder="1">
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="ul-li-items">
+                                <label for="linkinfo" class="labelstyle">
+                                    <input type="checkbox" class="inputsty" name="" id="linkinfo" value="alink" data-show="ShowLink" checked="">
+                                    <p class="descp">連結</p>
+                                </label> 
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="TEMDE-funccontroller">
+                        
+                        <div class="TEMDE-funccontrol-items">
+                            
+                            <div class="TEMDE-func-btn-yesno" data-func-btn-type="#labelchoose">
+                                <div class="left">
+                                    <div class="name">
+                                        <p>位置</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="ui-interact-10-comp">
+                                        <div class="openclose-block">
+                                            <a>
+                                                <p></p>
+                                                <span class="circle-btn"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="TEMDE-func-labeldeco-choose" id="labelchoose">
+                                <ul class="TEMDE-func-items-ul">
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>標籤</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle labeldeco-choose-TLin" data-action="labelTLin">TopLeftIn</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle labeldeco-choose-TCin" data-action="labelTCin">TopCenterIn</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle labeldeco-choose-TRin" data-action="labelTRin">TopRightIn</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle labeldeco-choose-TLout" data-action="labelTLout">TopLeftOut</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle labeldeco-choose-TRout" data-action="labelTRout">TopRightOut</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle labeldeco-choose-BLin" data-action="labelBLin">BottomLeftIn</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle labeldeco-choose-BRin" data-action="labelBRin">BottomRightIn</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle labeldeco-choose-BCin" data-action="labelBCin">BottomCenterIn</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="TEMDE-funccontrol-items">
+                            
+                            <div class="TEMDE-func-btn-yesno" data-func-btn-type="#textalignchoose">
+                                <div class="left">
+                                    <div class="name">
+                                        <p>文字對齊</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="ui-interact-10-comp">
+                                        <div class="openclose-block">
+                                            <a>
+                                                <p></p>
+                                                <span class="circle-btn"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="TEMDE-func-textalign-choose" id="textalignchoose">
+                                <ul class="TEMDE-func-items-ul">
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>主標題</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle textalign-choose-left" data-action="titleLeft">Left</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle textalign-choose-center" data-action="titleCenter">Center</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle textalign-choose-right" data-action="titleRight">Right</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>純文字</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle textalign-choose-left" data-action="textLeft">Left</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle textalign-choose-center" data-action="textCenter">Center</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle textalign-choose-right" data-action="textRight">Right</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="TEMDE-funccontrol-items">
+
+                            <div class="TEMDE-func-btn-yesno" data-func-btn-type="#colorchoose">
+                                <div class="left">
+                                    <div class="name">
+                                        <p>文字顏色</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="ui-interact-10-comp">
+                                        <div class="openclose-block">
+                                            <a>
+                                                <p></p>
+                                                <span class="circle-btn"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="TEMDE-func-color-choose" id="colorchoose">
+                                <ul class="TEMDE-func-items-ul colorsortsty">
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>標籤</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <div class="ColorPickerbuttonid" id="colorSelectorColorLabel">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>主標題</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorColorTitle">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>純文字</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorColorText">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>條列文字</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorColorList">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>按鈕</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorColorButton">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>連結</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorColorLink">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="TEMDE-funccontrol-items">
+
+                            <div class="TEMDE-func-btn-yesno" data-func-btn-type="#bgcolorchoose">
+                                <div class="left">
+                                    <div class="name">
+                                        <p>背景顏色</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="ui-interact-10-comp">
+                                        <div class="openclose-block">
+                                            <a>
+                                                <p></p>
+                                                <span class="circle-btn"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="TEMDE-func-bgcolor-choose" id="bgcolorchoose">
+                                <ul class="TEMDE-func-items-ul colorsortsty">
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>標籤</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorBgLabel">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>主標題</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorBgTitle">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>按鈕</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorBgButton">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>連結</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorBgLink">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>          
+                        <div class="TEMDE-funccontrol-items">
+                            
+                            <div class="TEMDE-func-btn-yesno" data-func-btn-type="#borderchoose">
+                                <div class="left">
+                                    <div class="name">
+                                        <p>外框邊線</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="ui-interact-10-comp">
+                                        <div class="openclose-block">
+                                            <a>
+                                                <p></p>
+                                                <span class="circle-btn"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="TEMDE-func-border-choose" id="borderchoose">
+                                <ul class="TEMDE-func-items-ul">
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>區塊</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-None" data-action="BlockborderlineNone">BorderNone</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BA" data-action="BlockborderlineAll">BorderAll</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BT" data-action="BlockborderlineTop">BorderTop</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BB" data-action="BlockborderlineBottom">BorderBottom</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BL" data-action="BlockborderlineLeft">BorderLeft</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BR" data-action="BlockborderlineRight">BorderRight</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>標籤</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-None" data-action="LabelborderlineNone">BorderNone</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BA" data-action="LabelborderlineAll">BorderAll</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BT" data-action="LabelborderlineTop">BorderTop</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BB" data-action="LabelborderlineBottom">BorderBottom</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BL" data-action="LabelborderlineLeft">BorderLeft</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BR" data-action="LabelborderlineRight">BorderRight</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>主標題</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-None" data-action="TitleborderlineNone">BorderNone</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BA" data-action="TitleborderlineAll">BorderAll</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BT" data-action="TitleborderlineTop">BorderTop</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BB" data-action="TitleborderlineBottom">BorderBottom</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BL" data-action="TitleborderlineLeft">BorderLeft</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BR" data-action="TitleborderlineRight">BorderRight</a>
+                                            </li>
+                                        </ul>
+                                    </li>     
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>按鈕</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-None" data-action="ButtonborderlineNone">BorderNone</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BA" data-action="ButtonborderlineAll">BorderAll</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BT" data-action="ButtonborderlineTop">BorderTop</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BB" data-action="ButtonborderlineBottom">BorderBottom</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BL" data-action="ButtonborderlineLeft">BorderLeft</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BR" data-action="ButtonborderlineRight">BorderRight</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>連結</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-None" data-action="LinkborderlineNone">BorderNone</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BA" data-action="LinkborderlineAll">BorderAll</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BT" data-action="LinkborderlineTop">BorderTop</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BB" data-action="LinkborderlineBottom">BorderBottom</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BL" data-action="LinkborderlineLeft">BorderLeft</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle border-choose-BR" data-action="LinkborderlineRight">BorderRight</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+
+                        </div>
+                        <div class="TEMDE-funccontrol-items">
+
+                            <div class="TEMDE-func-btn-yesno" data-func-btn-type="#linecolorchoose">
+                                <div class="left">
+                                    <div class="name">
+                                        <p>邊線顏色</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="ui-interact-10-comp">
+                                        <div class="openclose-block">
+                                            <a>
+                                                <p></p>
+                                                <span class="circle-btn"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="TEMDE-func-linecolor-choose" id="linecolorchoose">
+                                <ul class="TEMDE-func-items-ul colorsortsty">
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>區塊</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorBorderBlock">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>標籤</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorBorderLabel">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>主標題</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorBorderTitle">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>按鈕</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorBorderButton">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>連結</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                 <div class="ColorPickerbuttonid" id="colorSelectorBorderLink">
+                                                    <div class="ColorPickerbutton"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div> 
+                        <div class="TEMDE-funccontrol-items">
+                            
+                            <div class="TEMDE-func-btn-yesno" data-func-btn-type="#buttonchoose">
+                                <div class="left">
+                                    <div class="name">
+                                        <p>圓角</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="ui-interact-10-comp">
+                                        <div class="openclose-block">
+                                            <a>
+                                                <p></p>
+                                                <span class="circle-btn"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="TEMDE-func-button-choose" id="buttonchoose">
+                                <ul class="TEMDE-func-items-ul">
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>按鈕</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle button-choose-square" data-action="borderradiusSquare">Square</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle button-choose-round" data-action="borderradiusRound">Round</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle button-choose-oval" data-action="borderradiusOval">Oval</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="TEMDE-funccontrol-items">
+                            
+                            <div class="TEMDE-func-btn-yesno" data-func-btn-type="#shadowchoose">
+                                <div class="left">
+                                    <div class="name">
+                                        <p>陰影</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="ui-interact-10-comp">
+                                        <div class="openclose-block">
+                                            <a>
+                                                <p></p>
+                                                <span class="circle-btn"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="TEMDE-func-shadow-choose" id="shadowchoose">
+                                <ul class="TEMDE-func-items-ul">
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>區塊</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-None" data-action="BlockshadowNone">ShadowNone</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-SA" data-action="BlockshadowAll">ShadowAll</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-SR" data-action="BlockshadowRight">ShadowRight</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-SB" data-action="BlockshadowBottom">ShadowBottom</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-SRB" data-action="BlockshadowRightBotom">ShadowRightBottom</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>標籤</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-None" data-action="LabelshadowNone">ShadowNone</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-SA" data-action="LabelshadowAll">ShadowAll</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-SR" data-action="LabelshadowRight">ShadowRight</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-SB" data-action="LabelshadowBottom">ShadowBottom</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-SRB" data-action="LabelshadowRightBotom">ShadowRightBottom</a>
+                                            </li>
+                                        </ul>
+                                    </li>     
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>按鈕</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-None" data-action="ButtonshadowNone">ShadowNone</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-SA" data-action="ButtonshadowAll">ShadowAll</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-SR" data-action="ButtonshadowRight">ShadowRight</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-SB" data-action="ButtonshadowBottom">ShadowBottom</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle shadow-choose-SRB" data-action="ButtonshadowRightBotom">ShadowRightBottom</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="TEMDE-funccontrol-items">
+                            
+                            <div class="TEMDE-func-btn-yesno" data-func-btn-type="#paddingchoose">
+                                <div class="left">
+                                    <div class="name">
+                                        <p>間距</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="ui-interact-10-comp">
+                                        <div class="openclose-block">
+                                            <a>
+                                                <p></p>
+                                                <span class="circle-btn"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="TEMDE-func-paddingdeco-choose" id="paddingchoose">
+                                <ul class="TEMDE-func-items-ul">
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>區塊內部</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_10" data-action="BlockPaddingAll_10">All-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_10" data-action="BlockPaddingTopBottom_10">TopBottom-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_10" data-action="BlockPaddingLeftRight_10">LeftRight-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_20" data-action="BlockPaddingAll_20">All-20px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_20" data-action="BlockPaddingTopBottom_20">TopBottom-20px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_20" data-action="BlockPaddingLeftRight_20">LeftRight-20px</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>標籤</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_5" data-action="LabelPaddingAll_5">All-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_5" data-action="LabelPaddingTopBottom_5">TopBottom-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_5" data-action="LabelPaddingLeftRight_5">LeftRight-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_10" data-action="LabelPaddingAll_10">All-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_10" data-action="LabelPaddingTopBottom_10">TopBottom-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_10" data-action="LabelPaddingLeftRight_10">LeftRight-10px</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>區塊內文</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_10" data-action="BlockContentPaddingAll_10">All-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_10" data-action="BlockContentPaddingTopBottom_10">TopBottom-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_10" data-action="BlockContentPaddingLeftRight_10">LeftRight-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_20" data-action="BlockContentPaddingAll_20">All-20px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_20" data-action="BlockContentPaddingTopBottom_20">TopBottom-20px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_20" data-action="BlockContentPaddingLeftRight_20">LeftRight-20px</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>主標題</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_5" data-action="TitlePaddingAll_5">All-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_5" data-action="TitlePaddingTopBottom_5">TopBottom-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_5" data-action="TitlePaddingLeftRight_5">LeftRight-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_10" data-action="TitlePaddingAll_10">All-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_10" data-action="TitlePaddingTopBottom_10">TopBottom-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_10" data-action="TitlePaddingLeftRight_10">LeftRight-10px</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>純文字</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_5" data-action="TextPaddingAll_5">All-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_5" data-action="TextPaddingTopBottom_5">TopBottom-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_5" data-action="TextPaddingLeftRight_5">LeftRight-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_10" data-action="TextPaddingAll_10">All-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_10" data-action="TextPaddingTopBottom_10">TopBottom-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_10" data-action="TextPaddingLeftRight_10">LeftRight-10px</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>條列文字</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_5" data-action="ListPaddingAll_5">All-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_5" data-action="ListPaddingTopBottom_5">TopBottom-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_5" data-action="ListPaddingLeftRight_5">LeftRight-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_10" data-action="ListPaddingAll_10">All-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_10" data-action="ListPaddingTopBottom_10">TopBottom-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_10" data-action="ListPaddingLeftRight_10">LeftRight-10px</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="TEMDE-func-items-ul-li">
+                                        <div class="name-title">
+                                            <p>按鈕</p>
+                                        </div>
+                                        <ul class="ul-items">
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_5" data-action="ButtonPaddingAll_5">All-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_5" data-action="ButtonPaddingTopBottom_5">TopBottom-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_5" data-action="ButtonPaddingLeftRight_5">LeftRight-5px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-All_10" data-action="ButtonPaddingAll_10">All-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-TopBottom_10" data-action="ButtonPaddingTopBottom_10">TopBottom-10px</a>
+                                            </li>
+                                            <li class="ul-li-items">
+                                                <a href="" class="choosebtnstyle paddingdeco-choose-LeftRight_10" data-action="ButtonPaddingLeftRight_10">LeftRight-10px</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="TEMDE-demo-content">
+            <div class="TEMDE-demo-contentwidth">    
+
+                <div class="TEMDE-demo-pagestruct TEMDE-demo-pagestruct-TE">
+                    
+                    <div class="TEMDE-templateedit-block">
+
+                        <div class="ui-designtemplate-all ui-designtemplate-1" ui-TEMDE-value="ui-TEMDE-block">
+                            <ul class="ul-items">
+                                <li class="ul-li-items">
+                                    <div class="top">
+                                        <div class="ui-te-1-comp">
+                                            <div class="labeltag" ui-TEMDE-value="">
+                                                <p>標籤</p>
+                                            </div>
+                                            <div class="pic" ui-TEMDE-value="">
+                                                <img src="klaitbeimg/TEMDE-test2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="ui-te-1-comp">
+                                            <div class="title" ui-TEMDE-value="title">
+                                                <p>主標題</p>
+                                            </div>
+                                            <div class="content" ui-TEMDE-value="content">
+                                                <div class="text" ui-TEMDE-value="text">
+                                                    <p>純文字</p>
+                                                </div>
+                                                <ol class="ol-items" ui-TEMDE-value="ol-items">
+                                                    <li class="ol-li-items" ui-TEMDE-value="ol-items-li">第一點</li>
+                                                </ol>
+                                                <ul class="btnnn-ul" ui-TEMDE-value="btnnn-ul">
+                                                    <li class="btnnn-ul-li" ui-TEMDE-value="btnnn-ul-li">
+                                                        <a href="">按鈕</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="alink" ui-TEMDE-value="alink">
+                                                    <a href="">MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ul-li-items">
+                                    <div class="top">
+                                        <div class="ui-te-1-comp">
+                                            <div class="labeltag" ui-TEMDE-value="">
+                                                <p>標籤</p>
+                                            </div>
+                                            <div class="pic" ui-TEMDE-value="">
+                                                <img src="klaitbeimg/TEMDE-test2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="ui-te-1-comp">
+                                            <div class="title" ui-TEMDE-value="title">
+                                                <p>主標題</p>
+                                            </div>
+                                            <div class="content" ui-TEMDE-value="content">
+                                                <div class="text" ui-TEMDE-value="text">
+                                                    <p>純文字</p>
+                                                </div>
+                                                <ol class="ol-items" ui-TEMDE-value="ol-items">
+                                                    <li class="ol-li-items" ui-TEMDE-value="ol-items-li">第一點</li>
+                                                </ol>
+                                                <ul class="btnnn-ul" ui-TEMDE-value="btnnn-ul">
+                                                    <li class="btnnn-ul-li" ui-TEMDE-value="btnnn-ul-li">
+                                                        <a href="">按鈕</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="alink" ui-TEMDE-value="alink">
+                                                    <a href="">MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ul-li-items">
+                                    <div class="top">
+                                        <div class="ui-te-1-comp">
+                                            <div class="labeltag" ui-TEMDE-value="">
+                                                <p>標籤</p>
+                                            </div>
+                                            <div class="pic" ui-TEMDE-value="">
+                                                <img src="klaitbeimg/TEMDE-test2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="ui-te-1-comp">
+                                            <div class="title" ui-TEMDE-value="title">
+                                                <p>主標題</p>
+                                            </div>
+                                            <div class="content" ui-TEMDE-value="content">
+                                                <div class="text" ui-TEMDE-value="text">
+                                                    <p>純文字</p>
+                                                </div>
+                                                <ol class="ol-items" ui-TEMDE-value="ol-items">
+                                                    <li class="ol-li-items" ui-TEMDE-value="ol-items-li">第一點</li>
+                                                </ol>
+                                                <ul class="btnnn-ul" ui-TEMDE-value="btnnn-ul">
+                                                    <li class="btnnn-ul-li" ui-TEMDE-value="btnnn-ul-li">
+                                                        <a href="">按鈕</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="alink" ui-TEMDE-value="alink">
+                                                    <a href="">MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ul-li-items">
+                                    <div class="top">
+                                        <div class="ui-te-1-comp">
+                                            <div class="labeltag" ui-TEMDE-value="">
+                                                <p>標籤</p>
+                                            </div>
+                                            <div class="pic" ui-TEMDE-value="">
+                                                <img src="klaitbeimg/TEMDE-test2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="ui-te-1-comp">
+                                            <div class="title" ui-TEMDE-value="title">
+                                                <p>主標題</p>
+                                            </div>
+                                            <div class="content" ui-TEMDE-value="content">
+                                                <div class="text" ui-TEMDE-value="text">
+                                                    <p>純文字</p>
+                                                </div>
+                                                <ol class="ol-items" ui-TEMDE-value="ol-items">
+                                                    <li class="ol-li-items" ui-TEMDE-value="ol-items-li">第一點</li>
+                                                </ol>
+                                                <ul class="btnnn-ul" ui-TEMDE-value="btnnn-ul">
+                                                    <li class="btnnn-ul-li" ui-TEMDE-value="btnnn-ul-li">
+                                                        <a href="">按鈕</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="alink" ui-TEMDE-value="alink">
+                                                    <a href="">MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ui-designtemplate-all ui-designtemplate-2" ui-TEMDE-block="ui-TEMDE-block">
+                            <ul class="ul-items">
+                                <li class="ul-li-items">
+                                    <div class="left">
+                                        <div class="ui-te-2-comp">
+                                            <div class="labeltag" ui-TEMDE-labeltag="labeltag">
+                                                <p>標籤</p>
+                                            </div>
+                                            <div class="pic" ui-TEMDE-pic="pic">
+                                                <img src="klaitbeimg/TEMDE-test2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="ui-te-2-comp">
+                                            <div class="title" ui-TEMDE-title="title">
+                                                <p>主標題</p>
+                                            </div>
+                                            <div class="content" ui-TEMDE-content="content">
+                                                <div class="text" ui-TEMDE-text="text">
+                                                    <p>純文字</p>
+                                                </div>
+                                                <ol class="ol-items" ui-TEMDE-ol-items="ol-items">
+                                                    <li class="ol-li-items" ui-TEMDE-ol-items-li="ol-items-li">第一點</li>
+                                                </ol>
+                                                <ul class="btnnn-ul" ui-TEMDE-btnnn-ul="btnnn-ul">
+                                                    <li class="btnnn-ul-li" ui-TEMDE-btnnn-ul-li="btnnn-ul-li">
+                                                        <a href="">按鈕</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="alink" ui-TEMDE-alink="alink">
+                                                    <a href="">MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ui-designtemplate-all ui-designtemplate-2" ui-TEMDE-block="ui-TEMDE-block">
+                            <ul class="ul-items">
+                                <li class="ul-li-items">
+                                    <div class="left">
+                                        <div class="ui-te-2-comp">
+                                            <div class="title" ui-TEMDE-title="title">
+                                                <p>主標題</p>
+                                            </div>
+                                            <div class="content" ui-TEMDE-content="content">
+                                                <div class="text" ui-TEMDE-text="text">
+                                                    <p>純文字</p>
+                                                </div>
+                                                <ol class="ol-items" ui-TEMDE-ol-items="ol-items">
+                                                    <li class="ol-li-items" ui-TEMDE-ol-items-li="ol-items-li">第一點</li>
+                                                </ol>
+                                                <ul class="btnnn-ul" ui-TEMDE-btnnn-ul="btnnn-ul">
+                                                    <li class="btnnn-ul-li" ui-TEMDE-btnnn-ul-li="btnnn-ul-li">
+                                                        <a href="">按鈕</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="alink" ui-TEMDE-alink="alink">
+                                                    <a href="">MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="ui-te-2-comp">
+                                            <div class="labeltag" ui-TEMDE-labeltag="labeltag">
+                                                <p>標籤</p>
+                                            </div>
+                                            <div class="pic" ui-TEMDE-pic="pic">
+                                                <img src="klaitbeimg/TEMDE-test2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ui-designtemplate-all ui-designtemplate-1" ui-TEMDE-block="ui-TEMDE-block">
+                            <ul class="ul-items">
+                                <li class="ul-li-items">
+                                    <div class="ui-te-3-bg">
+                                        <div class="bgpic" style="background-image: url('klaitbeimg/TEMDE-test1.jpg');"></div>
+                                    </div>
+                                    <div class="ui-te-3-comp">
+                                        <div class="labeltag" ui-TEMDE-value="">
+                                            <p>標籤</p>
+                                        </div>
+                                        <div class="title" ui-TEMDE-value="title">
+                                            <p>主標題</p>
+                                        </div>
+                                        <div class="content" ui-TEMDE-value="content">
+                                            <div class="text" ui-TEMDE-value="text">
+                                                <p>純文字</p>
+                                            </div>
+                                            <ul class="btnnn-ul" ui-TEMDE-value="btnnn-ul">
+                                                <li class="btnnn-ul-li" ui-TEMDE-value="btnnn-ul-li">
+                                                    <a href="">按鈕</a>
+                                                </li>
+                                            </ul>
+                                            <div class="alink" ui-TEMDE-value="alink">
+                                                <a href="">MORE</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ul-li-items">
+                                    <div class="ui-te-3-bg">
+                                        <div class="bgpic" style="background-image: url('klaitbeimg/TEMDE-test1.jpg');"></div>
+                                    </div>
+                                    <div class="ui-te-3-comp">
+                                        <div class="labeltag" ui-TEMDE-value="">
+                                            <p>標籤</p>
+                                        </div>
+                                        <div class="title" ui-TEMDE-value="title">
+                                            <p>主標題</p>
+                                        </div>
+                                        <div class="content" ui-TEMDE-value="content">
+                                            <div class="text" ui-TEMDE-value="text">
+                                                <p>純文字</p>
+                                            </div>
+                                            <ul class="btnnn-ul" ui-TEMDE-value="btnnn-ul">
+                                                <li class="btnnn-ul-li" ui-TEMDE-value="btnnn-ul-li">
+                                                    <a href="">按鈕</a>
+                                                </li>
+                                            </ul>
+                                            <div class="alink" ui-TEMDE-value="alink">
+                                                <a href="">MORE</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ul-li-items">
+                                    <div class="ui-te-3-bg">
+                                        <div class="bgpic" style="background-image: url('klaitbeimg/TEMDE-test1.jpg');"></div>
+                                    </div>
+                                    <div class="ui-te-3-comp">
+                                        <div class="labeltag" ui-TEMDE-value="">
+                                            <p>標籤</p>
+                                        </div>
+                                        <div class="title" ui-TEMDE-value="title">
+                                            <p>主標題</p>
+                                        </div>
+                                        <div class="content" ui-TEMDE-value="content">
+                                            <div class="text" ui-TEMDE-value="text">
+                                                <p>純文字</p>
+                                            </div>
+                                            <ul class="btnnn-ul" ui-TEMDE-value="btnnn-ul">
+                                                <li class="btnnn-ul-li" ui-TEMDE-value="btnnn-ul-li">
+                                                    <a href="">按鈕</a>
+                                                </li>
+                                            </ul>
+                                            <div class="alink" ui-TEMDE-value="alink">
+                                                <a href="">MORE</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ul-li-items">
+                                    <div class="ui-te-3-bg">
+                                        <div class="bgpic" style="background-image: url('klaitbeimg/TEMDE-test1.jpg');"></div>
+                                    </div>
+                                    <div class="ui-te-3-comp">
+                                        <div class="labeltag" ui-TEMDE-value="">
+                                            <p>標籤</p>
+                                        </div>
+                                        <div class="title" ui-TEMDE-value="title">
+                                            <p>主標題</p>
+                                        </div>
+                                        <div class="content" ui-TEMDE-value="content">
+                                            <div class="text" ui-TEMDE-value="text">
+                                                <p>純文字</p>
+                                            </div>
+                                            <ul class="btnnn-ul" ui-TEMDE-value="btnnn-ul">
+                                                <li class="btnnn-ul-li" ui-TEMDE-value="btnnn-ul-li">
+                                                    <a href="">按鈕</a>
+                                                </li>
+                                            </ul>
+                                            <div class="alink" ui-TEMDE-value="alink">
+                                                <a href="">MORE</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/colorpicker.js"></script>
+<script src="js/ui-templatedesign.js"></script>
+<script>
+
+
+ 
+
+</script>
+
+</html>
+
